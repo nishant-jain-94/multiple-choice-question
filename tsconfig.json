@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "mcq-editor": [
+        "dist/mcq-editor"
+      ],
+      "mcq-editor/*": [
+        "dist/mcq-editor/*"
+      ]
+    }
   }
 }

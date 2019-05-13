@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "mcq-editor": {
+      "root": "projects/mcq-editor",
+      "sourceRoot": "projects/mcq-editor/src",
+      "projectType": "library",
+      "prefix": "quizetency",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mcq-editor/tsconfig.lib.json",
+            "project": "projects/mcq-editor/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mcq-editor/src/test.ts",
+            "tsConfig": "projects/mcq-editor/tsconfig.spec.json",
+            "karmaConfig": "projects/mcq-editor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mcq-editor/tsconfig.lib.json",
+              "projects/mcq-editor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "multiple-choice-question"
